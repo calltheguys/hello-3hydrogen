@@ -15,9 +15,14 @@
     "vite": "^2.9.0"
   },
   "dependencies": {
+    "@react-spring/three": "^9.4.5",
+    "@react-three/drei": "^9.13.2",
     "@shopify/hydrogen": "^1.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-three-fiber": "^6.0.13",
+    "react-use-refs": "^1.0.1",
+    "three": "^0.141.0"
   },
   "author": "juanp.prieto"
 }
