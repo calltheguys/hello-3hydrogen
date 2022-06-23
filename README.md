@@ -1,10 +1,12 @@
-# hello-world x ThreeJS
+# hydrogen x react-three-fiber demos
 
 Hydrogen is a React framework and SDK that you can use to build fast and dynamic Shopify custom storefronts.
 
 [Check out the docs](https://shopify.dev/custom-storefronts/hydrogen)
 
 [Run this template on StackBlitz](https://stackblitz.com/github/Shopify/hydrogen/tree/stackblitz/templates/hello-world-js)
+
+[react-three-fiber](https://github.com/pmndrs/react-three-fiber)
 
 ## Getting started
 
