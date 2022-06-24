@@ -4,7 +4,7 @@ import {useCallback, useLayoutEffect, useRef, useState} from 'react';
 import {Canvas, useFrame, useThree, createPortal} from '@react-three/fiber';
 import {useGLTF, OrbitControls, useFBO, Environment} from '@react-three/drei';
 
-export default function Lights() {
+export function Lights() {
   return (
     <>
       <color attach="background" args={['#f0f0f0']} />
@@ -15,21 +15,21 @@ export default function Lights() {
   );
 }
 
-export default function Farm(props) {
+export function Farm(props) {
   const {scene} = useGLTF(
     'https://market-assets.fra1.cdn.digitaloceanspaces.com/market-assets/models/low-poly-farm/model.gltf'
   );
   return <primitive object={scene} {...props} />;
 }
 
-export default function Ramen(props) {
+export function Ramen(props) {
   const {scene} = useGLTF(
     'https://market-assets.fra1.cdn.digitaloceanspaces.com/market-assets/models/bowl-broth/model.gltf'
   );
   return <primitive object={scene} {...props} />;
 }
 
-export default function Soda(props) {
+export function Soda(props) {
   const [hovered, spread] = useHover();
   const {nodes, materials} = useGLTF(
     'https://market-assets.fra1.cdn.digitaloceanspaces.com/market-assets/models/soda-bottle/model.gltf'

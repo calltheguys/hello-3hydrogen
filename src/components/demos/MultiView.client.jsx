@@ -14,7 +14,7 @@ import {
   Bounds,
 } from '@react-three/drei';
 
-export default function Soda(props) {
+function Soda(props) {
   const [hovered, spread] = useHover();
   const {nodes, materials} = useGLTF(
     'https://market-assets.fra1.cdn.digitaloceanspaces.com/market-assets/models/soda-bottle/model.gltf'
