@@ -20,5 +20,5 @@ export {SuspenseAndErrors} from './SuspenseAndErrors.client';
 export {SuspenseMaterial} from './SuspenseMaterial.client';
 export {SVGRenderer} from './SVGRenderer.client';
 export {Test} from './Test.client';
-export {ViewCube} from './ViewCube.client';
+export {ViewCube} from './ViewCubes.client';
 export {ViewTracking} from './ViewTracking.client';
