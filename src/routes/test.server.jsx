@@ -1,12 +1,19 @@
 import {Link} from '@shopify/hydrogen';
-import {Test} from '../components/index';
+import {lazy, Suspense} from 'react';
+import {Loading} from '../components/index.server';
+
+const Test = import.meta.env.SSR
+  ? Loading
+  : lazy(() => import('../components/demos/Test.client'));
 
 export default function TestRoute() {
   return (
     <main>
       <h1>Test</h1>
       <Link to="/">Back</Link>
-      <Test />
+      <Suspense fallback={<Loading />}>
+        <Test />
+      </Suspense>
     </main>
   );
 }

@@ -1,12 +1,20 @@
 import {Link} from '@shopify/hydrogen';
-import {MultiRender} from '../components/index';
+import {lazy, Suspense} from 'react';
+import {Loading} from '../components/index.server';
+
+const MultiRender = import.meta.env.SSR
+  ? Loading
+  : lazy(() => import('../components/demos/MultiRender.client'));
 
 export default function MultiRenderRoute() {
   return (
     <main>
       <h1>MultiRender</h1>
       <Link to="/">Back</Link>
-      <MultiRender />
+
+      <Suspense fallback={<Loading />}>
+        <MultiRender />
+      </Suspense>
     </main>
   );
 }

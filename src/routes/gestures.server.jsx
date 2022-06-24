@@ -1,12 +1,19 @@
 import {Link} from '@shopify/hydrogen';
-import {Gestures} from '../components/index';
+import {lazy, Suspense} from 'react';
+import {Loading} from '../components/index.server';
+
+const Gestures = import.meta.env.SSR
+  ? Loading
+  : lazy(() => import('../components/demos/Gestures.client'));
 
 export default function GesturesRoute() {
   return (
     <main>
       <h1>Gestures</h1>
       <Link to="/">Back</Link>
-      <Gestures />
+      <Suspense fallback={<Loading />}>
+        <Gestures />
+      </Suspense>
     </main>
   );
 }

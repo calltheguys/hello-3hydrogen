@@ -1,12 +1,19 @@
 import {Link} from '@shopify/hydrogen';
-import {SVGRenderer} from '../components/index';
+import {lazy, Suspense} from 'react';
+import {Loading} from '../components/index.server';
+
+const SVGRenderer = import.meta.env.SSR
+  ? Loading
+  : lazy(() => import('../components/demos/SVGRenderer.client'));
 
 export default function SVGRendererRoute() {
   return (
     <main>
       <h1>SVGRenderer</h1>
       <Link to="/">Back</Link>
-      <SVGRenderer />
+      <Suspense fallback={<Loading />}>
+        <SVGRenderer />
+      </Suspense>
     </main>
   );
 }
